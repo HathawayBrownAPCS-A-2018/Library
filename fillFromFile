@@ -31,6 +31,6 @@
           String nextBook = input.nextLine();
           System.out.println (nextBook);
       //    addBook(getBookFromString(nextBook));
-    }      
-    input.close();
-  }
+      }      
+      input.close();
+    }
