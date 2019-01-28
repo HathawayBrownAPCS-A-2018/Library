@@ -1,0 +1,36 @@
+// copy to your Library class.
+// Also include up top:
+//   import java.io.*;
+
+    /**
+     * Fills the Library from a data file.
+     * Precondition:  file BookList.tsv exists and is formatted as a 
+     *    tab-separated value file (.tsv).  
+     *    Fields: timestamp, title, author, date, pages
+     *    BookList.tsv contains at most MAX_BOOKS books
+     * Postcondition:  array bookList holds all of the Books in the file.
+     */
+    private void fillFromFile ()
+    {
+      // open the file
+      File file = new File("BookList.tsv");
+      Scanner input = null;
+      try
+      {
+          input = new Scanner(file);
+      }
+      catch (FileNotFoundException ex)
+      {
+          System.out.println("*** Cannot open BookList.tsv ***");
+          System.exit(1);        // quit the program
+      } 
+
+      // read the Books from the file, one per line
+      while (input.hasNext())
+      {
+          String nextBook = input.nextLine();
+          System.out.println (nextBook);
+      //    addBook(getBookFromString(nextBook));
+    }      
+    input.close();
+  }
