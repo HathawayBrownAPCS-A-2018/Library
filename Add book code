@@ -1,0 +1,15 @@
+public void add (int n, Book b)
+    {
+      if (bookList.length < MAX_BOOKS)
+        {
+        for (int i = bookList.length - 1; i > n; i--)
+        {
+            bookList[i] = bookList[i-1];
+            bookList[n] = b;
+        }
+      }
+      else
+      {
+          System.out.println ("There is not enough room to add another book");
+      }
+    }
