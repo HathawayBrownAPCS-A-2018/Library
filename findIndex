@@ -1,0 +1,20 @@
+/**
+     *   Finds the location for a given Book to maintain the Library 
+     *   in order.
+     *   PRECONDITION: The Library is in a sorted order already
+     *   
+     *   @param b   The Book to add to the Library
+     *   @return    The index where the Book belongs in the Library
+     */
+public int findIndex (Book b)
+    {
+        int index = 0;
+        for (int i = 0; i < bookList.length; i++)
+        {
+            if (b.compareTo(bookList[i]) > 0)
+            {
+                index = i;
+            }
+        }
+        return index;
+    }
