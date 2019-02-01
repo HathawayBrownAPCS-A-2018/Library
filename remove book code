@@ -1,0 +1,11 @@
+public Book remove (int n)
+   {
+       Book removedBook = bookList[n];
+       for (int i = n+1; i< bookList.length-1; i++)
+       {
+           bookList[i-1] = bookList[i];
+       }
+       bookList[bookList.length-1] = null;
+       numBooks --;
+       return removedBook;
+   }
