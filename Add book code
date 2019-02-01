@@ -1,6 +1,6 @@
 public void add (int n, Book b)
     {
-      if (bookList.length < MAX_BOOKS)
+      if (numBooks + 1 < MAX_BOOKS)
         {
         for (int i = bookList.length - 1; i > n; i--)
         {
